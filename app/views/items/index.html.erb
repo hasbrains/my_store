@@ -1,5 +1,25 @@
-<% @items.each do |i| %>
+<h1>Items</h1>
 
-  <p><%= link_to i.name, item_path(i) %></p>
+<% if @items.empty? %>
+  <b>No items in store</b>
+<% else %>
+<table>
+  <tr>
+    <th>item id</th>
+    <th>Name</th>
+    <th>Price</th>
+  </tr>
+
+  <% @items.each do |i| %>
+
+    <tr>
+      <td><%= i.id %></td>
+      <td><%= link_to i.name, item_path(i) %></td>
+      <td><%= i.price %> руб.</td>
+    </tr>
+
+  <% end %>
+
+</table>
 
 <% end %>
