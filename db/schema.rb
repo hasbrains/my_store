@@ -18,8 +18,12 @@ ActiveRecord::Schema.define(:version => 20120505021323) do
     t.string   "name"
     t.boolean  "real"
     t.float    "weight"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
+
+  add_index "items", ["name"], :name => "index_items_on_name"
+  add_index "items", ["price"], :name => "index_items_on_price"
 
 end
