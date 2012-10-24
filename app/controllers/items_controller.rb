@@ -1,17 +1,14 @@
 class ItemsController < ApplicationController
 
-  Create
-  Read
-  Update
-  Destroy
-
   def index
     @items = Item.all
-    render text: @items.map { |i| "#{i.name}: #{i.price}"}.join("<br/>")
   end
 
   # /items/1 GET
   def show
+    unless @item = Item.where(id: params[:id]).first
+      render text: "Page not found", status: 404
+    end
   end
 
   # /items/new GET
