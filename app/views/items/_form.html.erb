@@ -1,0 +1,5 @@
+<p>Цена: <br/><%= f.text_field :price %></p>
+<p>Название: <br/><%= f.text_field :name %></p>
+<p>Описание: <br/><%= f.text_area :description %></p>
+<p>Вес: <br/><%= f.text_field :weight %></p>
+<%= hidden_field_tag :admin, params[:admin] %>
