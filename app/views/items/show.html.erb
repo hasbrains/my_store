@@ -1,5 +1,7 @@
 <h1><%= @item.name %></h1>
 
+<p><%= image_tag @item.image.normal %></p>
+
 <ul>
   <li><%= @item.price %>руб.</li>
   <li><%= urls_to_links(urls_to_images(@item.description)) %></li>

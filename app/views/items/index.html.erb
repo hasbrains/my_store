@@ -3,24 +3,25 @@
 <% if @items.empty? %>
   <b>No items in store</b>
 <% else %>
-<table>
+<table class="items">
   <tr>
     <th>item id</th>
     <th>Name</th>
     <th>Price</th>
-    <th>created_at</th>
+    <th>Добавлено</th>
     <th></th>
+    <th>Рейтинг</th>
   </tr>
 
   <% @items.each do |i| %>
 
     <tr>
       <td><%= i.id %></td>
-      <td><%= link_to i.name, item_path(i) %></td>
+      <td><%= image_tag i.image.thumb %> <%= link_to i.name, item_path(i) %></td>
       <td><%= i.price %> руб.</td>
       <td><%= i.created_at.to_s.sub("2012", "2013") %></td>
       <td><%= link_to "Удалить", i, method: :delete, data: { confirm: "Точно удалить?" } %></td>
-      <td>Рейтинг: <%= i.votes_count %>, <%= link_to "+", upvote_item_path(i) %></td>
+      <td><%= i.votes_count %>, <%= link_to "+", upvote_item_path(i) %></td>
     </tr>
 
   <% end %>

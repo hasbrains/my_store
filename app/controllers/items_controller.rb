@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
 
-  before_filter :find_item,      only: [:show, :edit, :update, :destroy, :upvote]
+  before_filter :find_item,      only: [:show, :edit, :update, :destroy, :upvote, :crop_image]
   before_filter :check_if_admin, only: [:edit, :update, :new, :create, :destroy]
 
   def index
@@ -36,7 +36,7 @@ class ItemsController < ApplicationController
   def create
     @item = Item.create(params[:item])
     if @item.errors.empty?
-      redirect_to item_path(@item)
+      redirect_to crop_image_item_path(@item)
     else
       render "new"
     end
@@ -46,7 +46,7 @@ class ItemsController < ApplicationController
   def update
     @item.update_attributes(params[:item])
     if @item.errors.empty?
-      redirect_to item_path(@item)
+      redirect_to crop_image_item_path(@item)
     else
       render "edit"
     end
@@ -61,6 +61,13 @@ class ItemsController < ApplicationController
   def upvote
     @item.increment!(:votes_count)
     redirect_to action: :index
+  end
+
+  def crop_image
+    if request.put?
+      @item.crop_image!(params[:item][:image_crop_data])
+      redirect_to item_path(@item)
+    end
   end
 
   private

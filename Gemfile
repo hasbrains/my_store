@@ -7,8 +7,9 @@ gem 'rails', '3.2.8'
 
 gem 'sqlite3'
 gem 'thin'
-gem 'carrierwave'
 gem 'rack', "1.4.1"
+gem 'rmagick'
+gem 'carrierwave'
 
 gem "devise"
 

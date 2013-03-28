@@ -9,6 +9,8 @@ MyStore::Application.routes.draw do
   resources :items do
     get :upvote,    on: :member
     get :expensive, on: :collection
+    get :crop_image, on: :member
+    put :crop_image, on: :member
   end
 
   match "admin/users_count" => "admin#users_count"

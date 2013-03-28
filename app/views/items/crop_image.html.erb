@@ -1,0 +1,11 @@
+<%= form_for @item, url: crop_image_item_path(@item), method: :put do |f| %>
+  <%= image_tag @item.image, id: 'crop_image'%>
+  <%= hidden_field_tag :admin, 1 %>
+  <%= f.fields_for :image_crop_data do |c| %>
+    <%= c.hidden_field :x %>
+    <%= c.hidden_field :y %>
+    <%= c.hidden_field :width %>
+    <%= c.hidden_field :height %>
+  <% end %>
+  <%= f.submit "Crop image!" %>
+<% end %>
