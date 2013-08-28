@@ -1,0 +1,9 @@
+%h1= @item.name
+%p= image_tag @item.image.normal unless @item.image.blank?
+
+%ul
+  %li= "#{@item.price} руб."
+  %li= urls_to_links(urls_to_images(@item.description)) 
+  %li Вес: #{@item.weight} кг.
+
+= render partial: "shared/email"
