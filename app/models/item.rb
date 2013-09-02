@@ -1,7 +1,6 @@
 class Item < ActiveRecord::Base
 
   attr_reader :image_crop_data
-  attr_accessible :price, :name, :real, :weight, :description, :image
   validates :price, numericality: { greater_than: 0, allow_nil: true }
 
   validates :name, presence: true
