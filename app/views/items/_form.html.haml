@@ -1,0 +1,22 @@
+%p
+  Цена:
+  %br/
+  = f.text_field :price
+%p
+  Название:
+  %br/
+  = f.text_field :name
+%p
+  Описание:
+  %br/
+  = f.text_area :description
+%p
+  Вес:
+  %br/
+  = f.text_field :weight
+%p
+  Изображение:
+  %br/
+  = f.file_field :image
+
+= hidden_field_tag :admin, params[:admin]

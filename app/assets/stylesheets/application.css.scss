@@ -12,4 +12,9 @@
  *= require_tree .
  */
 
+body { padding: 1em; }
+
+@import "bootstrap";
+
+input[type=submit] { @extend .btn; @extend .btn-success; }
 .email { font-size: 80%; color: #555; margin: 1em; }

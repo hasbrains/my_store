@@ -10,8 +10,12 @@ gem 'thin'
 gem 'rack'
 gem 'rmagick'
 gem 'carrierwave'
+gem 'haml'
 
 gem "devise"
+
+gem 'sass-rails'
+gem 'bootstrap-sass'
 
 # Gems used only for assets and not required
 # in production environments by default.

@@ -1,0 +1,6 @@
+%h1 Create new item
+
+= form_for @item do |f|
+
+  = render partial: "form", locals: { f: f }
+  %p= f.submit "Создать товар"
