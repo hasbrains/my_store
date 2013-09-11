@@ -5,7 +5,7 @@
 <ul>
   <li><%= @item.price %>руб.</li>
   <li><%= urls_to_links(urls_to_images(@item.description)) %></li>
-  <li>Вес: <%= @item.weight %>кг.</li>
+  <li><%= t("item.weight") %> <%= @item.weight %>кг.</li>
 
 </ul>
 <%= render partial: "shared/email" %>

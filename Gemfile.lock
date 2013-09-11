@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/plataformatec/simple_form
+  revision: 359606f222fa0972a4a14ec70140ac00f7c80839
+  specs:
+    simple_form (3.0.0.rc)
+      actionpack (>= 4.0.0, < 4.1)
+      activemodel (>= 4.0.0, < 4.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -51,6 +59,9 @@ GEM
     diff-lcs (1.2.4)
     erubis (2.7.0)
     eventmachine (1.0.3)
+    exception_notification (4.0.0)
+      actionmailer (>= 3.0.4)
+      activesupport (>= 3.0.4)
     execjs (2.0.0)
     factory_girl (4.2.0)
       activesupport (>= 3.0.0)
@@ -140,6 +151,7 @@ DEPENDENCIES
   carrierwave
   coffee-rails
   devise
+  exception_notification
   factory_girl
   haml
   jquery-rails
@@ -148,6 +160,7 @@ DEPENDENCIES
   rmagick
   rspec-rails
   sass-rails
+  simple_form!
   sqlite3
   thin
   uglifier
