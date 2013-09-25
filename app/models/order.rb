@@ -7,4 +7,5 @@ class Order < ActiveRecord::Base
     write_attribute :total, items.map(&:price).inject(:+)
   end
 
+
 end
