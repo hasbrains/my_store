@@ -11,8 +11,12 @@ describe Order do
     order.items << item2
 
     order.calculate_total
-    order.total.should == 30
+    expect(order.total).to eq(30)
 
+  end
+
+  it "raises exception if order has no items in it" do
+    expect( -> { create(:order) }).to raise_exception
   end
 
 end
