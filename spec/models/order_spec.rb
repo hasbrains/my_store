@@ -15,8 +15,4 @@ describe Order do
 
   end
 
-  it "raises exception if order has no items in it" do
-    expect( -> { create(:order) }).to raise_exception
-  end
-
 end

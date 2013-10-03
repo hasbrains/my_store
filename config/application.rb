@@ -53,6 +53,8 @@ module MyStore
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
+    config.secret_key_base = 'secret'
+
     config.generators do |g|
       g.template_engine :haml
       g.test_framework      :rspec, fixtures: true, views: false
