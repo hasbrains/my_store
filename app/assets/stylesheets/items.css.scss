@@ -7,4 +7,6 @@ table.items {
   border-collapse: collapse;
   th, td { border: dotted 1px #aaa; padding: 0.5em; vertical-align: center; text-align: left; }
 
+  .deleteAction { color: blue; border-bottom: dotted; cursor: pointer; }
+
 }
