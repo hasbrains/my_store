@@ -56,6 +56,7 @@ class ItemsController < ApplicationController
   def destroy
     @item.destroy
     render json: { success: true }
+    ItemsMailer.item_destroyed(@item).deliver
   end
 
   def upvote
