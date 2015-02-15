@@ -12,6 +12,9 @@ class Item < ActiveRecord::Base
 
   mount_uploader :image, ImageUploader
 
+  include Redis::Objects
+  counter :views
+
   def crop_image!(c)
     c.each { |k,v| c[k] = v.to_i }
     @image_crop_data = c

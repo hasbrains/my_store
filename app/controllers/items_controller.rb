@@ -21,6 +21,7 @@ class ItemsController < ApplicationController
     unless @item
       render text: "Page not found", status: 404
     end
+    @item.views.increment
   end
 
   # /items/new GET

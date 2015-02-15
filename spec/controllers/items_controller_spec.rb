@@ -6,10 +6,19 @@ describe ItemsController, type: :controller do
 
   describe "show action" do
 
+    before(:each) do
+      @item = create(:item)
+    end
+
     it "renders show template if an item is found" do
-      item = create(:item)
-      get :show, id: item.id
+      get :show, id: @item.id
       expect(response).to render_template('show')
+    end
+
+    it "updates views counter" do
+      expect(@item.views.value).to be(0)
+      get :show, id: @item.id
+      expect(@item.views.value).to be(1)
     end
 
   end

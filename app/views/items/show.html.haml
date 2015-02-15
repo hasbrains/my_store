@@ -5,5 +5,6 @@
   %li= "#{@item.price} руб."
   %li= urls_to_links(urls_to_images(@item.description)) 
   %li Вес: #{@item.weight} кг.
+  %li Просмотров: <b>#{@item.views.value}</b>
 
 = render partial: "shared/email"

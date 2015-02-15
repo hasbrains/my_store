@@ -16,6 +16,8 @@ gem 'sass-rails'
 gem 'bootstrap-sass'
 gem 'exception_notification'
 
+gem 'redis-objects'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
