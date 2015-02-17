@@ -1,0 +1,24 @@
+!!!
+%html
+  %head
+    %title MyStore
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+
+  %body
+
+    .sessionInfo
+      - if current_user
+        = current_user.login
+        | #{link_to "Sign out", destroy_user_session_path}
+      - else
+        = link_to "Sign in", new_user_session_path
+        | #{link_to "Registration",new_user_registration_path}
+
+    - if flash[:error]
+      .flash.error= flash[:error]
+    - if flash[:success]
+      .flash.success= flash[:success]
+
+    = yield
