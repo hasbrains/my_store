@@ -4,7 +4,7 @@ MyStore::Application.routes.draw do
     get "/users/sign_out" => "devise/sessions#destroy"
   end
 
-  devise_for :users
+  devise_for :users, controllers: { registrations: "users/registrations" }
 
   resources :items do
     get :upvote,    on: :member
