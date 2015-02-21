@@ -1,5 +1,7 @@
 MyStore::Application.routes.draw do
 
+  root to: "pages#frontpage"
+
   devise_scope :user do
     get "/users/sign_out" => "devise/sessions#destroy"
   end

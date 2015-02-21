@@ -15,6 +15,7 @@ gem "devise"
 gem 'sass-rails'
 gem 'bootstrap-sass'
 gem 'exception_notification'
+gem 'meta-tags'
 
 gem 'redis-objects'
 gem 'recaptcha', require: "recaptcha/rails"
