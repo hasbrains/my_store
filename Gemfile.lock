@@ -78,6 +78,8 @@ GEM
     factory_girl_rails (4.5.0)
       factory_girl (~> 4.5.0)
       railties (>= 3.0.0)
+    faker (1.4.3)
+      i18n (~> 0.5)
     globalid (0.3.3)
       activesupport (>= 4.1.0)
     haml (4.0.6)
@@ -195,6 +197,7 @@ DEPENDENCIES
   devise
   exception_notification
   factory_girl_rails
+  faker
   haml
   jquery-rails
   meta-tags

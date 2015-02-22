@@ -20,6 +20,10 @@ gem 'meta-tags'
 gem 'redis-objects'
 gem 'recaptcha', require: "recaptcha/rails"
 
+group :development do
+  gem 'faker'
+end
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
